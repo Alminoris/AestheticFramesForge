@@ -64,7 +64,6 @@ public class AestheticFrames
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
         }
     }
 }

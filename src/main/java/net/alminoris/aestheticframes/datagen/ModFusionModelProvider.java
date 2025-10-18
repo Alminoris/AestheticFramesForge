@@ -50,11 +50,11 @@ public class ModFusionModelProvider extends FusionModelProvider
     private void registerConnectingModel(String name)
     {
         var modelData = ConnectingModelDataBuilder.builder()
-                .parent(ResourceLocation.fromNamespaceAndPath("minecraft", "block/cube_all"))
-                .texture("all", ResourceLocation.fromNamespaceAndPath(AestheticFrames.MOD_ID, "block/"+name))
+                .parent(new ResourceLocation("minecraft", "block/cube_all"))
+                .texture("all", new ResourceLocation(AestheticFrames.MOD_ID, "block/"+name))
                 .connection(DefaultConnectionPredicates.isSameBlock())
                 .build();
         var modelInstance = ModelInstance.of(DefaultModelTypes.CONNECTING, modelData);
-        this.addModel(ResourceLocation.fromNamespaceAndPath(AestheticFrames.MOD_ID, "block/"+name), modelInstance);
+        this.addModel(new ResourceLocation(AestheticFrames.MOD_ID, "block/"+name), modelInstance);
     }
 }

@@ -92,3 +92,16 @@ public class BlockSetsHelper
         return combinedStones;
     }
 }
+
+//implementation fg.deobf("curse.maven:fusion-connected-textures-854949:6417051")
+
+/*
+flatDir { dirs "libs" }
+    maven { url "https://www.cursemaven.com" }
+    exclusiveContent {
+        forRepository {
+            maven { url = "https://api.modrinth.com/maven" }
+        }
+        filter { includeGroup "maven.modrinth" }
+    }
+* */

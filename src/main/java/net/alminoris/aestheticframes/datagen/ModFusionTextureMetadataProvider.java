@@ -44,7 +44,7 @@ public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvi
                 .layout(ConnectingTextureLayout.PIECED)
                 .build();
         this.addTextureMetadata(
-                ResourceLocation.fromNamespaceAndPath(AestheticFrames.MOD_ID,"block/"+name),
+                new ResourceLocation(AestheticFrames.MOD_ID,"block/"+name),
                 DefaultTextureTypes.CONNECTING,
                 textureData
         );
@@ -56,7 +56,7 @@ public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvi
                 .layout(ConnectingTextureLayout.FULL)
                 .build();
         this.addTextureMetadata(
-                ResourceLocation.fromNamespaceAndPath(AestheticFrames.MOD_ID,"block/"+name),
+                new ResourceLocation(AestheticFrames.MOD_ID,"block/"+name),
                 DefaultTextureTypes.CONNECTING,
                 textureData
         );

@@ -5,10 +5,12 @@ import net.alminoris.aestheticframes.item.ModItemGroups;
 import net.alminoris.aestheticframes.item.ModItems;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticframes.util.helper.ModJsonHelper;
+import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -37,7 +39,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         for(String name : BlockSetsHelper.STONES)
         {
-            Block block = ForgeRegistries.BLOCKS.getValue(ResourceLocation.withDefaultNamespace(name.equals("basalt_side") ? "basalt" :
+            Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", name.equals("basalt_side") ? "basalt" :
                     (name.equals("quartz_block_bottom") ? "quartz_block" : name)));
 
             registerFrame(recipeExporter, ModBlocks.FRAMES.get(name).get(), block);
@@ -54,7 +56,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         for(String name : BlockSetsHelper.WOODS)
         {
             String blockName = (name.equals("crimson") || name.equals("warped")) ? "stem" : (name.equals("bamboo") ? "block" : "log");
-            Block block = ForgeRegistries.BLOCKS.getValue(ResourceLocation.withDefaultNamespace("stripped_"+name+"_"+blockName));
+            Block block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", "stripped_"+name+"_"+blockName));
 
             registerFrame(recipeExporter, ModBlocks.FRAMES.get(name).get(), block);
             registerCrestFrame(recipeExporter, ModBlocks.FRAMES.get("crest_"+name).get(), ModBlocks.FRAMES.get(name).get(), block);
@@ -99,6 +101,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             ModJsonHelper.createShapedRecipe("crest_scaled_frame_"+name, "4", modId+":stripped_"+name+"_log", "aestheticframes:crest_frame_"+name,
                     "\"///\",", "\"/#/\",", "\"///\"");
         }
+    }
+
+    private static String getHasName(ItemLike p_176603_) {
+        return "has_" + getItemName(p_176603_);
+    }
+
+    private static String getItemName(ItemLike p_176633_) {
+        return Registry.ITEM.getKey(p_176633_.asItem()).getPath();
     }
 
     private void registerExtraFrames(String[] list, String modId, String toRemove)

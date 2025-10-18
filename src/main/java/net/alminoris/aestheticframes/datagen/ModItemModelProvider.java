@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider
 {
@@ -26,14 +26,14 @@ public class ModItemModelProvider extends ItemModelProvider
     private ItemModelBuilder generatedItem(RegistryObject<Item> item)
     {
         return withExistingParent(item.getId().getPath(),
-                ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(AestheticFrames.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.tryParse("item/generated")).texture("layer0",
+                new ResourceLocation(AestheticFrames.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item)
     {
         return withExistingParent(item.getId().getPath(),
-                ResourceLocation.parse("item/handheld")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(AestheticFrames.MOD_ID,"item/" + item.getId().getPath()));
+                ResourceLocation.tryParse("item/handheld")).texture("layer0",
+                new ResourceLocation(AestheticFrames.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

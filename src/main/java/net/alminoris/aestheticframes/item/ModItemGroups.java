@@ -4,6 +4,7 @@ import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.block.ModBlocks;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -43,7 +44,7 @@ public class ModItemGroups
 
         @Override
         public Component getDisplayName() {
-            return Component.translatable("itemGroup." + AestheticFrames.MOD_ID + ".afstab");
+            return new TranslatableComponent("itemGroup." + AestheticFrames.MOD_ID + ".afstab");
         }
     };
 

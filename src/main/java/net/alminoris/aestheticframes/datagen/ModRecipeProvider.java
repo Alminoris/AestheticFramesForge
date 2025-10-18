@@ -5,7 +5,6 @@ import net.alminoris.aestheticframes.item.ModItemGroups;
 import net.alminoris.aestheticframes.item.ModItems;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticframes.util.helper.ModJsonHelper;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;

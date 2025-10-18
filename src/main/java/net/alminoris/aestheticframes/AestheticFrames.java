@@ -24,9 +24,9 @@ public class AestheticFrames
     public static final String MOD_ID = "aestheticframes";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public AestheticFrames(FMLJavaModLoadingContext context)
+    public AestheticFrames()
     {
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
 
@@ -37,8 +37,6 @@ public class AestheticFrames
         ModBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

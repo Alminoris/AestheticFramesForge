@@ -15,23 +15,22 @@ public class DataGenerators
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator generator = event.getGenerator();
-        DataGenerator packOutput = generator.getDataGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), new ModLootTableProvider(generator));
+        generator.addProvider(event.includeServer(), new ModRecipeProvider(generator));
 
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(generator, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(generator, existingFileHelper));
 
-        generator.addProvider(event.includeClient(), new ModFusionModelProvider(packOutput));
-        generator.addProvider(event.includeClient(), new ModFusionTextureMetadataProvider(packOutput));
+        generator.addProvider(event.includeClient(), new ModFusionModelProvider(generator));
+        generator.addProvider(event.includeClient(), new ModFusionTextureMetadataProvider(generator));
 
-        generator.addProvider(event.includeClient(), new ModLanguageProviderEnUs(packOutput));
-        generator.addProvider(event.includeClient(), new ModLanguageProviderDeDe(packOutput));
-        generator.addProvider(event.includeClient(), new ModLanguageProviderEsEs(packOutput));
-        generator.addProvider(event.includeClient(), new ModLanguageProviderFrFr(packOutput));
-        generator.addProvider(event.includeClient(), new ModLanguageProviderRuRu(packOutput));
-        generator.addProvider(event.includeClient(), new ModLanguageProviderUkUa(packOutput));
+        generator.addProvider(event.includeClient(), new ModLanguageProviderEnUs(generator));
+        generator.addProvider(event.includeClient(), new ModLanguageProviderDeDe(generator));
+        generator.addProvider(event.includeClient(), new ModLanguageProviderEsEs(generator));
+        generator.addProvider(event.includeClient(), new ModLanguageProviderFrFr(generator));
+        generator.addProvider(event.includeClient(), new ModLanguageProviderRuRu(generator));
+        generator.addProvider(event.includeClient(), new ModLanguageProviderUkUa(generator));
     }
 }

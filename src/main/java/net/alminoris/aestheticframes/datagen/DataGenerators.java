@@ -2,7 +2,7 @@ package net.alminoris.aestheticframes.datagen;
 
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,7 +15,7 @@ public class DataGenerators
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator generator = event.getGenerator();
-        PackOutput packOutput = generator.getPackOutput();
+        DataGenerator packOutput = generator.getDataGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));

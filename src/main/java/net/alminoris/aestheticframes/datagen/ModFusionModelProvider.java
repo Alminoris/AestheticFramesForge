@@ -7,12 +7,12 @@ import com.supermartijn642.fusion.api.predicate.DefaultConnectionPredicates;
 import com.supermartijn642.fusion.api.provider.FusionModelProvider;
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 
 public class ModFusionModelProvider extends FusionModelProvider
 {
-    public ModFusionModelProvider(PackOutput output)
+    public ModFusionModelProvider(DataGenerator output)
     {
         super(AestheticFrames.MOD_ID, output);
     }

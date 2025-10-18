@@ -6,12 +6,12 @@ import com.supermartijn642.fusion.api.texture.data.ConnectingTextureData;
 import com.supermartijn642.fusion.api.texture.data.ConnectingTextureLayout;
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 
 public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvider
 {
-    public ModFusionTextureMetadataProvider(PackOutput output)
+    public ModFusionTextureMetadataProvider(DataGenerator output)
     {
         super(AestheticFrames.MOD_ID, output);
     }

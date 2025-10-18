@@ -5,7 +5,7 @@ import net.alminoris.aestheticframes.block.ModBlocks;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticframes.util.helper.ModJsonHelper;
 import net.alminoris.aestheticframes.util.helper.ModJsonTemplates;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -17,7 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockStateProvider extends BlockStateProvider
 {
-    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper)
+    public ModBlockStateProvider(DataGenerator output, ExistingFileHelper exFileHelper)
     {
         super(output, AestheticFrames.MOD_ID, exFileHelper);
     }

@@ -1,7 +1,7 @@
 package net.alminoris.aestheticframes.datagen;
 
 import net.alminoris.aestheticframes.AestheticFrames;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import java.util.LinkedHashMap;
@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class ModLanguageProviderUkUa extends LanguageProvider
 {
-    public ModLanguageProviderUkUa(PackOutput output)
+    public ModLanguageProviderUkUa(DataGenerator output)
     {
         super(output, AestheticFrames.MOD_ID, "uk_ua");
     }
@@ -127,6 +127,6 @@ public class ModLanguageProviderUkUa extends LanguageProvider
         }
 
         add("block.aestheticframes.whitened_white_terracotta","Вибілена біла теракота");
-        add("itemgroup.afstab","Aesthetic Frames");
+        add("itemGroup.aestheticframes.afstab","Aesthetic Frames");
     }
 }

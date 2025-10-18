@@ -1,7 +1,7 @@
 package net.alminoris.aestheticframes.datagen;
 
 import net.alminoris.aestheticframes.AestheticFrames;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import java.util.LinkedHashMap;
@@ -10,7 +10,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModLanguageProviderFrFr extends LanguageProvider
 {
-    public ModLanguageProviderFrFr(PackOutput output)
+    public ModLanguageProviderFrFr(DataGenerator output)
     {
         super(output, AestheticFrames.MOD_ID, "fr_fr");
     }
@@ -127,6 +127,6 @@ public class ModLanguageProviderFrFr extends LanguageProvider
 
         add("block.aestheticframes.whitened_white_terracotta", "Terre cuite blanche blanchie");
 
-        add("itemgroup.afstab","Aesthetic Frames");
+        add("itemGroup.aestheticframes.afstab","Aesthetic Frames");
     }
 }

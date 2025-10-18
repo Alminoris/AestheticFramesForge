@@ -1,11 +1,12 @@
 package net.alminoris.aestheticframes.datagen;
 
 import net.alminoris.aestheticframes.block.ModBlocks;
+import net.alminoris.aestheticframes.item.ModItemGroups;
 import net.alminoris.aestheticframes.item.ModItems;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticframes.util.helper.ModJsonHelper;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -19,15 +20,15 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder
 {
-    public ModRecipeProvider(PackOutput pOutput)
+    public ModRecipeProvider(DataGenerator pOutput)
     {
         super(pOutput);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> recipeExporter)
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> recipeExporter)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITENED_WHITE_TERRACOTTA.get(), 1)
+        ShapedRecipeBuilder.shaped(ModBlocks.WHITENED_WHITE_TERRACOTTA.get(), 1)
                 .pattern("#/")
                 .define('#', Blocks.WHITE_TERRACOTTA)
                 .define('/', Items.WHITE_DYE)
@@ -67,13 +68,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             registerScaledCrestFrame(recipeExporter, ModBlocks.SCALED_FRAMES.get("crest_"+name).get(), ModBlocks.FRAMES.get("crest_"+name).get(), block);
         }
 
-        registerExtraFrames(BlockSetsHelper.EXTRA_WOODS_AN, "arborealnature");
-        registerExtraFrames(BlockSetsHelper.EXTRA_WOODS_WF, "wildfields");
-        registerExtraFrames(BlockSetsHelper.EXTRA_STONES_WF, "wildfields");
-        registerExtraFrames(BlockSetsHelper.MT_WOOD_NAMES, "missingtrees");
-        registerExtraFrames(BlockSetsHelper.WT_WOOD_NAMES, "whisperleaftrees");
-        registerExtraFrames(BlockSetsHelper.ST_WOOD_NAMES, "silverwoodtrees");
-        registerExtraFrames(BlockSetsHelper.NSS_WOOD_NAMES, "natures_spirit", "_nss");
+        registerExtraFrames(ModItemGroups.AN_WOOD_NAMES.toArray(new String[0]), "arborealnature");
+        registerExtraFrames(ModItemGroups.WF_WOOD_NAMES.toArray(new String[0]), "wildfields");
+        registerExtraFrames(ModItemGroups.EXTRA_STONES_WF.toArray(new String[0]), "wildfields");
+        registerExtraFrames(ModItemGroups.MT_WOOD_NAMES.toArray(new String[0]), "missingtrees");
+        registerExtraFrames(ModItemGroups.WT_WOOD_NAMES.toArray(new String[0]), "whisperleaftrees");
+        registerExtraFrames(ModItemGroups.ST_WOOD_NAMES.toArray(new String[0]), "silverwoodtrees");
+        registerExtraFrames(ModItemGroups.NSS_WOOD_NAMES.toArray(new String[0]), "natures_spirit", "_nss");
     }
 
     private void registerExtraFrames(String[] list, String modId)
@@ -134,7 +135,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerFrame(Consumer<FinishedRecipe> recipeExporter, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, frame, 4)
+        ShapedRecipeBuilder.shaped(frame, 4)
                 .pattern("///")
                 .pattern("/#/")
                 .pattern("///")
@@ -147,7 +148,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerCrestFrame(Consumer<FinishedRecipe> recipeExporter, Block crestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, crestFrame, 2)
+        ShapedRecipeBuilder.shaped(crestFrame, 2)
                 .pattern("/ /")
                 .pattern(" # ")
                 .pattern("/ /")
@@ -160,7 +161,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerHorizontalFrame(Consumer<FinishedRecipe> recipeExporter, Block horizontalFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, horizontalFrame, 1)
+        ShapedRecipeBuilder.shaped(horizontalFrame, 1)
                 .pattern("/#/")
                 .define('#', frame)
                 .define('/', strippedOak)
@@ -171,7 +172,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerVerticalFrame(Consumer<FinishedRecipe> recipeExporter, Block verticalFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, verticalFrame, 1)
+        ShapedRecipeBuilder.shaped(verticalFrame, 1)
                 .pattern("/")
                 .pattern("#")
                 .pattern("/")
@@ -184,7 +185,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerPerpendicularFrame(Consumer<FinishedRecipe> recipeExporter, Block perpendicularFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, perpendicularFrame, 2)
+        ShapedRecipeBuilder.shaped(perpendicularFrame, 2)
                 .pattern(" / ")
                 .pattern("/#/")
                 .pattern(" / ")
@@ -197,7 +198,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerPerpendicularCrestFrame(Consumer<FinishedRecipe> recipeExporter, Block perpendicularCrestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, perpendicularCrestFrame, 4)
+        ShapedRecipeBuilder.shaped(perpendicularCrestFrame, 4)
                 .pattern("///")
                 .pattern("/#/")
                 .pattern("///")
@@ -210,7 +211,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerHorizontalCrestFrame(Consumer<FinishedRecipe> recipeExporter, Block horizontalCrestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, horizontalCrestFrame, 3)
+        ShapedRecipeBuilder.shaped(horizontalCrestFrame, 3)
                 .pattern("/ /")
                 .pattern("/#/")
                 .pattern("/ /")
@@ -223,7 +224,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerVerticalCrestFrame(Consumer<FinishedRecipe> recipeExporter, Block verticalCrestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, verticalCrestFrame, 3)
+        ShapedRecipeBuilder.shaped(verticalCrestFrame, 3)
                 .pattern("///")
                 .pattern(" # ")
                 .pattern("///")
@@ -236,7 +237,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerScaledCrestFrame(Consumer<FinishedRecipe> recipeExporter, Block scaledCrestFrame, Block crestFrame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, scaledCrestFrame, 4)
+        ShapedRecipeBuilder.shaped(scaledCrestFrame, 4)
                 .pattern("///")
                 .pattern("/#/")
                 .pattern("///")

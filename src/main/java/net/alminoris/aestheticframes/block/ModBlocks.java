@@ -22,7 +22,7 @@ public class ModBlocks
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AestheticFrames.MOD_ID);
 
     public static final RegistryObject<Block> WHITENED_WHITE_TERRACOTTA = registerBlock("whitened_white_terracotta",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
 
     public static final Dictionary<String, RegistryObject<Block>> FRAMES = new Hashtable<>()
     {{
@@ -30,12 +30,12 @@ public class ModBlocks
         {
             for(String name : BlockSetsHelper.getWoods())
             {
-                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA))));
+                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
 
             for(String name : BlockSetsHelper.getStones())
             {
-                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA))));
+                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
         }
     }};
@@ -47,13 +47,13 @@ public class ModBlocks
             for(String name : BlockSetsHelper.getWoods())
             {
                 put(frameName+name, registerBlock(frameName+"scaled_frame_"+name,
-                        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA))));
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
 
             for(String name : BlockSetsHelper.getStones())
             {
                 put(frameName+name, registerBlock(frameName+"scaled_frame_"+name,
-                        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA))));
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
         }
     }};

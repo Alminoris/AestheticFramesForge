@@ -21,8 +21,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.17.1_forge_v.1.1.0'
-group = 'net.alminoris.aestheticfames' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'aestheticfames'
+group = 'net.alminoris.aestheticframes' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'aestheticframes'
 
 // Mojang ships Java 16 to end users in 1.17+ instead of Java 8 in 1.16 or lower, so your mod should target Java 16.
 java.toolchain.languageVersion = JavaLanguageVersion.of(16)

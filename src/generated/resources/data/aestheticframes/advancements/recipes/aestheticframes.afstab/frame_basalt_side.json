@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:whitened_white_terracotta"
-            ]
+            "item": "aestheticframes:whitened_white_terracotta"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:basalt"
-            ]
+            "item": "minecraft:basalt"
           }
         ]
       }

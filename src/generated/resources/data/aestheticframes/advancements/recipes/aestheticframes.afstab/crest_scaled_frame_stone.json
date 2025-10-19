@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:crest_frame_stone"
-            ]
+            "item": "aestheticframes:crest_frame_stone"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stone"
-            ]
+            "item": "minecraft:stone"
           }
         ]
       }

@@ -1,9 +1,9 @@
 package net.alminoris.aestheticframes.datagen;
 
 import net.alminoris.aestheticframes.AestheticFrames;
+import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.ForgeRegistries;
 

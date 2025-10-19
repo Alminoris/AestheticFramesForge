@@ -8,7 +8,7 @@ import com.supermartijn642.fusion.api.provider.FusionModelProvider;
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModFusionModelProvider extends FusionModelProvider
@@ -50,12 +50,13 @@ public class ModFusionModelProvider extends FusionModelProvider
 
     private void registerConnectingModel(String name)
     {
-        var modelData = ConnectingModelDataBuilder.builder()
+        com.supermartijn642.fusion.api.model.data.ConnectingModelData modelData = ConnectingModelDataBuilder.builder()
                 .parent(new ResourceLocation("minecraft", "block/cube_all"))
                 .texture("all", new ResourceLocation(AestheticFrames.MOD_ID, "block/"+name))
                 .connection(DefaultConnectionPredicates.isSameBlock())
                 .build();
-        var modelInstance = ModelInstance.of(DefaultModelTypes.CONNECTING, modelData);
+        ModelInstance<com. supermartijn642.fusion. api. model. data. ConnectingModelData> modelInstance =
+                ModelInstance.of(DefaultModelTypes.CONNECTING, modelData);
         this.addModel(new ResourceLocation(AestheticFrames.MOD_ID, "block/"+name), modelInstance);
     }
 }

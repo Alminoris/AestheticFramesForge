@@ -2,13 +2,13 @@ package net.alminoris.aestheticframes.datagen.loot;
 
 import net.alminoris.aestheticframes.block.ModBlocks;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
-import net.minecraft.data.loot.BlockLoot;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraft.block.Block;
+import net.minecraft.data.loot.BlockLootTables;
+import net.minecraftforge.fml.RegistryObject;
 
 import java.util.Set;
 
-public class ModBlockLootTables extends BlockLoot
+public class ModBlockLootTables extends BlockLootTables
 {
     @Override
     protected void addTables()

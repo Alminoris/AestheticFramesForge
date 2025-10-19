@@ -2,11 +2,10 @@ package net.alminoris.aestheticframes.datagen;
 
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = AestheticFrames.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators

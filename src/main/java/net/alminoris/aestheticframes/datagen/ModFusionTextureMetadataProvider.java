@@ -7,7 +7,7 @@ import com.supermartijn642.fusion.api.texture.data.ConnectingTextureLayout;
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.ResourceLocation;
 
 public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvider
 {
@@ -40,7 +40,7 @@ public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvi
 
     private void registerPiecedConnectingTextureType(String name)
     {
-        var textureData = ConnectingTextureData.builder()
+        ConnectingTextureData textureData = ConnectingTextureData.builder()
                 .layout(ConnectingTextureLayout.PIECED)
                 .build();
         this.addTextureMetadata(
@@ -52,7 +52,7 @@ public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvi
 
     private void registerFullConnectingTextureType(String name)
     {
-        var textureData = ConnectingTextureData.builder()
+        ConnectingTextureData textureData = ConnectingTextureData.builder()
                 .layout(ConnectingTextureLayout.FULL)
                 .build();
         this.addTextureMetadata(

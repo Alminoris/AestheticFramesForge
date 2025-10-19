@@ -3,12 +3,12 @@ package net.alminoris.aestheticframes.datagen;
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.item.ModItems;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.fml.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider
 {

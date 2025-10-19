@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:frame_andesite"
-            ]
+            "item": "aestheticframes:frame_andesite"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:andesite"
-            ]
+            "item": "minecraft:andesite"
           }
         ]
       }

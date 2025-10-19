@@ -4,13 +4,13 @@ import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.item.ModItemGroups;
 import net.alminoris.aestheticframes.item.ModItems;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -23,38 +23,38 @@ public class ModBlocks
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AestheticFrames.MOD_ID);
 
     public static final RegistryObject<Block> WHITENED_WHITE_TERRACOTTA = registerBlock("whitened_white_terracotta",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA)));
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA)));
 
-    public static final Dictionary<String, RegistryObject<Block>> FRAMES = new Hashtable<>()
+    public static final Dictionary<String, RegistryObject<Block>> FRAMES = new Hashtable<String, RegistryObject<Block>>()
     {{
         for(String frameName : BlockSetsHelper.FRAME_TYPES)
         {
             for(String name : BlockSetsHelper.getWoods())
             {
-                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
+                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
 
             for(String name : BlockSetsHelper.getStones())
             {
-                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
+                put(frameName+name, registerBlock(frameName+"frame_"+name, () -> new Block(AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
         }
     }};
 
-    public static final Dictionary<String, RegistryObject<Block>> SCALED_FRAMES = new Hashtable<>()
+    public static final Dictionary<String, RegistryObject<Block>> SCALED_FRAMES = new Hashtable<String, RegistryObject<Block>>()
     {{
         for(String frameName : BlockSetsHelper.SCALED_FRAME_TYPES)
         {
             for(String name : BlockSetsHelper.getWoods())
             {
                 put(frameName+name, registerBlock(frameName+"scaled_frame_"+name,
-                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
+                        () -> new Block(AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
 
             for(String name : BlockSetsHelper.getStones())
             {
                 put(frameName+name, registerBlock(frameName+"scaled_frame_"+name,
-                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_TERRACOTTA))));
+                        () -> new Block(AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA))));
             }
         }
     }};

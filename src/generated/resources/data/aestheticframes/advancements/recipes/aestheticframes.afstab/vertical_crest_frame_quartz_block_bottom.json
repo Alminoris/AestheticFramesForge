@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:frame_quartz_block_bottom"
-            ]
+            "item": "aestheticframes:frame_quartz_block_bottom"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:quartz_block"
-            ]
+            "item": "minecraft:quartz_block"
           }
         ]
       }

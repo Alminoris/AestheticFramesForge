@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:frame_basalt_side"
-            ]
+            "item": "aestheticframes:frame_basalt_side"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:basalt"
-            ]
+            "item": "minecraft:basalt"
           }
         ]
       }

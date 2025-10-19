@@ -5,14 +5,14 @@ import net.alminoris.aestheticframes.block.ModBlocks;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticframes.util.helper.ModJsonHelper;
 import net.alminoris.aestheticframes.util.helper.ModJsonTemplates;
+import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBlockStateProvider extends BlockStateProvider

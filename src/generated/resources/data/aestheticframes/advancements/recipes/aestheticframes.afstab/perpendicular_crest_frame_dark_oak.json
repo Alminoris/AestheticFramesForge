@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:frame_dark_oak"
-            ]
+            "item": "aestheticframes:frame_dark_oak"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stripped_dark_oak_log"
-            ]
+            "item": "minecraft:stripped_dark_oak_log"
           }
         ]
       }

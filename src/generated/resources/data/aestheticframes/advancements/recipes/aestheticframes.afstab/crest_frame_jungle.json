@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:frame_jungle"
-            ]
+            "item": "aestheticframes:frame_jungle"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stripped_jungle_log"
-            ]
+            "item": "minecraft:stripped_jungle_log"
           }
         ]
       }

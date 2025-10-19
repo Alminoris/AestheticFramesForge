@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:frame_stone_bricks"
-            ]
+            "item": "aestheticframes:frame_stone_bricks"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stone_bricks"
-            ]
+            "item": "minecraft:stone_bricks"
           }
         ]
       }

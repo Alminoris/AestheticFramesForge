@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "aestheticframes:crest_frame_diorite"
-            ]
+            "item": "aestheticframes:crest_frame_diorite"
           }
         ]
       }
@@ -23,9 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:diorite"
-            ]
+            "item": "minecraft:diorite"
           }
         ]
       }

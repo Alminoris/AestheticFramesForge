@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_crest_frame_jungle": {
+    "hasItem_crest_frame_jungle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_stripped_jungle_log": {
+    "hasItem_stripped_jungle_log": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_crest_frame_jungle",
-      "has_stripped_jungle_log",
+      "hasItem_crest_frame_jungle",
+      "hasItem_stripped_jungle_log",
       "has_the_recipe"
     ]
   ]

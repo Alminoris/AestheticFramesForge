@@ -9,13 +9,13 @@ import net.alminoris.aestheticframes.AestheticFrames;
 import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.client.model.generators.ExistingFileHelper;
 
 public class ModFusionModelProvider extends FusionModelProvider
 {
-    public ModFusionModelProvider(DataGenerator output, ExistingFileHelper existingFileHelper)
+    public ModFusionModelProvider(DataGenerator output)
     {
-        super(AestheticFrames.MOD_ID, output, existingFileHelper);
+        super(AestheticFrames.MOD_ID, output);
     }
 
     @Override

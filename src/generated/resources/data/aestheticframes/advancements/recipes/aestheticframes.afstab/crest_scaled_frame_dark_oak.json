@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_crest_frame_dark_oak": {
+    "hasItem_crest_frame_dark_oak": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_stripped_dark_oak_log": {
+    "hasItem_stripped_dark_oak_log": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_crest_frame_dark_oak",
-      "has_stripped_dark_oak_log",
+      "hasItem_crest_frame_dark_oak",
+      "hasItem_stripped_dark_oak_log",
       "has_the_recipe"
     ]
   ]

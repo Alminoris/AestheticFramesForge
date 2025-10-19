@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_frame_bricks": {
+    "hasItem_frame_bricks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_bricks": {
+    "hasItem_bricks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_frame_bricks",
-      "has_bricks",
+      "hasItem_frame_bricks",
+      "hasItem_bricks",
       "has_the_recipe"
     ]
   ]

@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_crest_frame_andesite": {
+    "hasItem_crest_frame_andesite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_andesite": {
+    "hasItem_andesite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_crest_frame_andesite",
-      "has_andesite",
+      "hasItem_crest_frame_andesite",
+      "hasItem_andesite",
       "has_the_recipe"
     ]
   ]

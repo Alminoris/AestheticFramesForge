@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_white_terracotta": {
+    "hasItem_white_terracotta": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_white_dye": {
+    "hasItem_white_dye": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_white_terracotta",
-      "has_white_dye",
+      "hasItem_white_terracotta",
+      "hasItem_white_dye",
       "has_the_recipe"
     ]
   ]

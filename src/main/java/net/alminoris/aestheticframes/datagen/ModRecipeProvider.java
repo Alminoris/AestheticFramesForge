@@ -26,16 +26,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         super(pOutput);
     }
 
+
+
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> recipeExporter)
+    protected void registerRecipes(Consumer<IFinishedRecipe> recipeExporter)
     {
-        ShapedRecipeBuilder.shaped(ModBlocks.WHITENED_WHITE_TERRACOTTA.get(), 1)
-                .pattern("#/")
-                .define('#', Blocks.WHITE_TERRACOTTA)
-                .define('/', Items.WHITE_DYE)
-                .unlockedBy(getHasName(Blocks.WHITE_TERRACOTTA), has(Blocks.WHITE_TERRACOTTA))
-                .unlockedBy(getHasName(Items.WHITE_DYE), has(Items.WHITE_DYE))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.WHITENED_WHITE_TERRACOTTA.get(), 1)
+                .patternLine("#/")
+                .key('#', Blocks.WHITE_TERRACOTTA)
+                .key('/', Items.WHITE_DYE)
+                .addCriterion(getHasName(Blocks.WHITE_TERRACOTTA), hasItem(Blocks.WHITE_TERRACOTTA))
+                .addCriterion(getHasName(Items.WHITE_DYE), hasItem(Items.WHITE_DYE))
+                .build(recipeExporter);
 
         for(String name : BlockSetsHelper.STONES)
         {
@@ -105,7 +107,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
     private static String getHasName(IItemProvider item) {
-        return "has_" + getItemName(item);
+        return "hasItem_" + getItemName(item);
     }
 
     private static String getItemName(IItemProvider item) {
@@ -145,116 +147,116 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void registerFrame(Consumer<IFinishedRecipe> recipeExporter, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(frame, 4)
-                .pattern("///")
-                .pattern("/#/")
-                .pattern("///")
-                .define('#', ModBlocks.WHITENED_WHITE_TERRACOTTA.get())
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(ModBlocks.WHITENED_WHITE_TERRACOTTA.get()), has(ModBlocks.WHITENED_WHITE_TERRACOTTA.get()))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(frame, 4)
+                .patternLine("///")
+                .patternLine("/#/")
+                .patternLine("///")
+                .key('#', ModBlocks.WHITENED_WHITE_TERRACOTTA.get())
+                .key('/', strippedOak)
+                .addCriterion(getHasName(ModBlocks.WHITENED_WHITE_TERRACOTTA.get()), hasItem(ModBlocks.WHITENED_WHITE_TERRACOTTA.get()))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerCrestFrame(Consumer<IFinishedRecipe> recipeExporter, Block crestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(crestFrame, 2)
-                .pattern("/ /")
-                .pattern(" # ")
-                .pattern("/ /")
-                .define('#', frame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(frame), has(frame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(crestFrame, 2)
+                .patternLine("/ /")
+                .patternLine(" # ")
+                .patternLine("/ /")
+                .key('#', frame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(frame), hasItem(frame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerHorizontalFrame(Consumer<IFinishedRecipe> recipeExporter, Block horizontalFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(horizontalFrame, 1)
-                .pattern("/#/")
-                .define('#', frame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(frame), has(frame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(horizontalFrame, 1)
+                .patternLine("/#/")
+                .key('#', frame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(frame), hasItem(frame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerVerticalFrame(Consumer<IFinishedRecipe> recipeExporter, Block verticalFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(verticalFrame, 1)
-                .pattern("/")
-                .pattern("#")
-                .pattern("/")
-                .define('#', frame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(frame), has(frame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(verticalFrame, 1)
+                .patternLine("/")
+                .patternLine("#")
+                .patternLine("/")
+                .key('#', frame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(frame), hasItem(frame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerPerpendicularFrame(Consumer<IFinishedRecipe> recipeExporter, Block perpendicularFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(perpendicularFrame, 2)
-                .pattern(" / ")
-                .pattern("/#/")
-                .pattern(" / ")
-                .define('#', frame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(frame), has(frame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(perpendicularFrame, 2)
+                .patternLine(" / ")
+                .patternLine("/#/")
+                .patternLine(" / ")
+                .key('#', frame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(frame), hasItem(frame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerPerpendicularCrestFrame(Consumer<IFinishedRecipe> recipeExporter, Block perpendicularCrestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(perpendicularCrestFrame, 4)
-                .pattern("///")
-                .pattern("/#/")
-                .pattern("///")
-                .define('#', frame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(frame), has(frame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(perpendicularCrestFrame, 4)
+                .patternLine("///")
+                .patternLine("/#/")
+                .patternLine("///")
+                .key('#', frame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(frame), hasItem(frame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerHorizontalCrestFrame(Consumer<IFinishedRecipe> recipeExporter, Block horizontalCrestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(horizontalCrestFrame, 3)
-                .pattern("/ /")
-                .pattern("/#/")
-                .pattern("/ /")
-                .define('#', frame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(frame), has(frame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(horizontalCrestFrame, 3)
+                .patternLine("/ /")
+                .patternLine("/#/")
+                .patternLine("/ /")
+                .key('#', frame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(frame), hasItem(frame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerVerticalCrestFrame(Consumer<IFinishedRecipe> recipeExporter, Block verticalCrestFrame, Block frame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(verticalCrestFrame, 3)
-                .pattern("///")
-                .pattern(" # ")
-                .pattern("///")
-                .define('#', frame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(frame), has(frame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(verticalCrestFrame, 3)
+                .patternLine("///")
+                .patternLine(" # ")
+                .patternLine("///")
+                .key('#', frame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(frame), hasItem(frame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 
     private void registerScaledCrestFrame(Consumer<IFinishedRecipe> recipeExporter, Block scaledCrestFrame, Block crestFrame, Block strippedOak)
     {
-        ShapedRecipeBuilder.shaped(scaledCrestFrame, 4)
-                .pattern("///")
-                .pattern("/#/")
-                .pattern("///")
-                .define('#', crestFrame)
-                .define('/', strippedOak)
-                .unlockedBy(getHasName(crestFrame), has(crestFrame))
-                .unlockedBy(getHasName(strippedOak), has(strippedOak))
-                .save(recipeExporter);
+        ShapedRecipeBuilder.shapedRecipe(scaledCrestFrame, 4)
+                .patternLine("///")
+                .patternLine("/#/")
+                .patternLine("///")
+                .key('#', crestFrame)
+                .key('/', strippedOak)
+                .addCriterion(getHasName(crestFrame), hasItem(crestFrame))
+                .addCriterion(getHasName(strippedOak), hasItem(strippedOak))
+                .build(recipeExporter);
     }
 }

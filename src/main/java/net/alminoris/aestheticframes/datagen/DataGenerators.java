@@ -2,7 +2,7 @@ package net.alminoris.aestheticframes.datagen;
 
 import net.alminoris.aestheticframes.AestheticFrames;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
@@ -22,7 +22,7 @@ public class DataGenerators
         generator.addProvider( new ModBlockStateProvider(generator, existingFileHelper));
         generator.addProvider( new ModItemModelProvider(generator, existingFileHelper));
 
-        generator.addProvider( new ModFusionModelProvider(generator, existingFileHelper));
+        generator.addProvider( new ModFusionModelProvider(generator));
         generator.addProvider( new ModFusionTextureMetadataProvider(generator));
 
         generator.addProvider( new ModLanguageProviderEnUs(generator));

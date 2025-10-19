@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_crest_frame_quartz_block_bottom": {
+    "hasItem_crest_frame_quartz_block_bottom": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_quartz_block": {
+    "hasItem_quartz_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_crest_frame_quartz_block_bottom",
-      "has_quartz_block",
+      "hasItem_crest_frame_quartz_block_bottom",
+      "hasItem_quartz_block",
       "has_the_recipe"
     ]
   ]

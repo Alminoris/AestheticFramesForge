@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_crest_frame_granite": {
+    "hasItem_crest_frame_granite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_granite": {
+    "hasItem_granite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_crest_frame_granite",
-      "has_granite",
+      "hasItem_crest_frame_granite",
+      "hasItem_granite",
       "has_the_recipe"
     ]
   ]

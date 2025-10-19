@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_frame_diorite": {
+    "hasItem_frame_diorite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_diorite": {
+    "hasItem_diorite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_frame_diorite",
-      "has_diorite",
+      "hasItem_frame_diorite",
+      "hasItem_diorite",
       "has_the_recipe"
     ]
   ]

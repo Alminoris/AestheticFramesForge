@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_frame_sandstone": {
+    "hasItem_frame_sandstone": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,7 +16,7 @@
         ]
       }
     },
-    "has_sandstone": {
+    "hasItem_sandstone": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -35,8 +35,8 @@
   },
   "requirements": [
     [
-      "has_frame_sandstone",
-      "has_sandstone",
+      "hasItem_frame_sandstone",
+      "hasItem_sandstone",
       "has_the_recipe"
     ]
   ]

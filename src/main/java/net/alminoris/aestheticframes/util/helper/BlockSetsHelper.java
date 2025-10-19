@@ -14,14 +14,13 @@ public class BlockSetsHelper
 
     public static final String[] STONES =
             {
-                    "stone", "blackstone", "andesite", "diorite", "granite", "basalt_side",
+                    "stone", "andesite", "diorite", "granite",
                     "quartz_block_bottom", "stone_bricks", "bricks", "sandstone"
             };
 
     public static final String[] WOODS =
             {
-                    "oak", "birch", "spruce", "jungle", "acacia", "dark_oak",
-                    "crimson", "warped"
+                    "oak", "birch", "spruce", "jungle", "acacia", "dark_oak"
             };
 
     public static final String[] FRAME_TYPES =

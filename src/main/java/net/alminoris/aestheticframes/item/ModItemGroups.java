@@ -36,13 +36,13 @@ public class ModItemGroups
     public static final ItemGroup AFS_TAB = new ItemGroup(AestheticFrames.MOD_ID + ".afstab")
     {
         @Override
-        public ItemStack makeIcon() {
+        public ItemStack createIcon() {
             return new ItemStack(ModBlocks.FRAMES.get("oak").get().asItem());
         }
 
         @Override
-        public ITextComponent getDisplayName() {
-            return new TranslationTextComponent("itemGroup." + AestheticFrames.MOD_ID + ".afstab");
+        public String getTranslationKey() {
+            return new TranslationTextComponent("itemGroup." + AestheticFrames.MOD_ID + ".afstab").getKey();
         }
     };
 

@@ -2,6 +2,7 @@ package net.alminoris.aestheticframes.datagen;
 
 import com.supermartijn642.fusion.api.provider.FusionTextureMetadataProvider;
 import com.supermartijn642.fusion.api.texture.DefaultTextureTypes;
+import com.supermartijn642.fusion.api.texture.FusionTextureTypeRegistry;
 import com.supermartijn642.fusion.api.texture.data.ConnectingTextureData;
 import com.supermartijn642.fusion.api.texture.data.ConnectingTextureLayout;
 import net.alminoris.aestheticframes.AestheticFrames;
@@ -43,6 +44,10 @@ public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvi
         ConnectingTextureData textureData = ConnectingTextureData.builder()
                 .layout(ConnectingTextureLayout.PIECED)
                 .build();
+
+        FusionTextureTypeRegistry.registerTextureType(new ResourceLocation(AestheticFrames.MOD_ID,"block/"+name),
+                DefaultTextureTypes.CONNECTING);
+
         this.addTextureMetadata(
                 new ResourceLocation(AestheticFrames.MOD_ID,"block/"+name),
                 DefaultTextureTypes.CONNECTING,
@@ -55,6 +60,10 @@ public class ModFusionTextureMetadataProvider extends FusionTextureMetadataProvi
         ConnectingTextureData textureData = ConnectingTextureData.builder()
                 .layout(ConnectingTextureLayout.FULL)
                 .build();
+
+        FusionTextureTypeRegistry.registerTextureType(new ResourceLocation(AestheticFrames.MOD_ID,"block/"+name),
+                DefaultTextureTypes.CONNECTING);
+
         this.addTextureMetadata(
                 new ResourceLocation(AestheticFrames.MOD_ID,"block/"+name),
                 DefaultTextureTypes.CONNECTING,

@@ -19,11 +19,11 @@ public class DataGenerators
         generator.addProvider(new ModLootTableProvider(generator));
         generator.addProvider(new ModRecipeProvider(generator));
 
+        //generator.addProvider( new ModFusionModelProvider(generator));
+        //generator.addProvider( new ModFusionTextureMetadataProvider(generator));
+
         generator.addProvider( new ModBlockStateProvider(generator, existingFileHelper));
         generator.addProvider( new ModItemModelProvider(generator, existingFileHelper));
-
-        generator.addProvider( new ModFusionModelProvider(generator));
-        generator.addProvider( new ModFusionTextureMetadataProvider(generator));
 
         generator.addProvider( new ModLanguageProviderEnUs(generator));
         generator.addProvider( new ModLanguageProviderDeDe(generator));

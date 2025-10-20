@@ -12,7 +12,7 @@ public class ModJsonHelper
     {
         String projectPath = System.getProperty("user.dir");
 
-        String filePath = projectPath.replace("run-data", "src\\main\\resources") + "/data/"+ AestheticFrames.MOD_ID+"/recipes/";
+        String filePath = projectPath.replace("run", "src\\main\\resources") + "/data/"+ AestheticFrames.MOD_ID+"/recipes/";
 
         File directory = new File(filePath);
         if (!directory.exists())
@@ -24,6 +24,81 @@ public class ModJsonHelper
         String jsonContent = ModJsonTemplates.SHAPED_RECIPE.replace("COUNT", count)
                 .replace("INGREDIENT_NAME", ingredientName).replace("LOG_NAME", logName).replace("OUTPUT_NAME", outputName)
                 .replace("PATTERN1", pattern1).replace("PATTERN2", pattern2).replace("PATTERN3", pattern3);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createFusionModel(String name)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("run", "src\\main\\resources") + "/assets/"+ AestheticFrames.MOD_ID+"/models/block/";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = name + ".json";
+        File modelFile = new File(directory, fileName);
+
+        String jsonContent = ModJsonTemplates.FUSION_CONNECTING_BLOCK_MODEL.replace("NAME", name);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createFusionTextureMetadataFull(String name)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("run", "src\\main\\resources") + "/assets/"+ AestheticFrames.MOD_ID+"/textures/block/";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = name + ".png.mcmeta";
+        File modelFile = new File(directory, fileName);
+
+        String jsonContent = ModJsonTemplates.FUSION_FULL_CONNECTING;
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createFusionTextureMetadataPieced(String name)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("run", "src\\main\\resources") + "/assets/"+ AestheticFrames.MOD_ID+"/textures/block/";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = name + ".png.mcmeta";
+        File modelFile = new File(directory, fileName);
+
+        String jsonContent = ModJsonTemplates.FUSION_PIECED_CONNECTING;
 
         try (FileWriter writer = new FileWriter(modelFile))
         {

@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 public class ModItems
 {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, AestheticFrames.MOD_ID);
+            new DeferredRegister<>(ForgeRegistries.ITEMS, AestheticFrames.MOD_ID);
 
     private static <T extends Item> RegistryObject<T> registerItem(String name, Supplier<T> item)
     {

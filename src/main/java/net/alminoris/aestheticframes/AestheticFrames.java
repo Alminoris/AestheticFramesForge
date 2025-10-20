@@ -3,19 +3,15 @@ package net.alminoris.aestheticframes;
 import net.alminoris.aestheticframes.block.ModBlocks;
 import net.alminoris.aestheticframes.item.ModItemGroups;
 import net.alminoris.aestheticframes.item.ModItems;
-import net.alminoris.aestheticframes.util.helper.BlockSetsHelper;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
 
 @Mod(AestheticFrames.MOD_ID)
 public class AestheticFrames
@@ -54,6 +50,7 @@ public class AestheticFrames
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
         }
     }
 }

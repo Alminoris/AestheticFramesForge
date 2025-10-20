@@ -13,24 +13,24 @@ public class ModBlockLootTables extends BlockLootTables
     @Override
     protected void addTables()
     {
-        registerDropSelfLootTable(ModBlocks.WHITENED_WHITE_TERRACOTTA.get());
+        func_218492_c(ModBlocks.WHITENED_WHITE_TERRACOTTA.get());
 
         for(String name : BlockSetsHelper.getWoods())
         {
             for (String frameName : BlockSetsHelper.FRAME_TYPES)
-                registerDropSelfLootTable(ModBlocks.FRAMES.get(frameName+name).get());
+                func_218492_c(ModBlocks.FRAMES.get(frameName+name).get());
 
             for (String frameName : BlockSetsHelper.SCALED_FRAME_TYPES)
-                registerDropSelfLootTable(ModBlocks.SCALED_FRAMES.get(frameName+name).get());
+                func_218492_c(ModBlocks.SCALED_FRAMES.get(frameName+name).get());
         }
 
         for(String name : BlockSetsHelper.getStones())
         {
             for (String frameName : BlockSetsHelper.FRAME_TYPES)
-                registerDropSelfLootTable(ModBlocks.FRAMES.get(frameName+name).get());
+                func_218492_c(ModBlocks.FRAMES.get(frameName+name).get());
 
             for (String frameName : BlockSetsHelper.SCALED_FRAME_TYPES)
-                registerDropSelfLootTable(ModBlocks.SCALED_FRAMES.get(frameName+name).get());
+                func_218492_c(ModBlocks.SCALED_FRAMES.get(frameName+name).get());
         }
     }
 

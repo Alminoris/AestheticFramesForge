@@ -19,7 +19,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks
 {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AestheticFrames.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, AestheticFrames.MOD_ID);
 
     public static final RegistryObject<Block> WHITENED_WHITE_TERRACOTTA = registerBlock("whitened_white_terracotta",
             () -> new Block(Block.Properties.from(Blocks.WHITE_TERRACOTTA)));

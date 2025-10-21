@@ -20,7 +20,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.17.1_forge_v.1.1.0'
+version = '1.17.1_forge_v2.0.0'
 group = 'net.alminoris.aestheticframes' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'aestheticframes'
 

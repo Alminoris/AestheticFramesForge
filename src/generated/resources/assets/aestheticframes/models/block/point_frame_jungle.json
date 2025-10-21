@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "aestheticframes:block/point_frame_jungle"
+  },
+  "connections": {
+    "predicates": [
+      {
+        "type": "fusion:is_same_block"
+      }
+    ],
+    "type": "fusion:or"
+  },
+  "loader": "fusion:model",
+  "type": "fusion:connecting"
+}
